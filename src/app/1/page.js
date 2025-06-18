@@ -180,21 +180,15 @@ export default function PageOne() {
         <a href="#" className="gradient-button">Brandkit</a>
       </div>
 
-      <section
-  className="footer-animator-wrapper"
-  onMouseEnter={() => setHoveringFooter(true)}
-  onMouseLeave={() => setHoveringFooter(false)}
->
-  <div className={`footer-animator-inner ${hoveringFooter ? 'visible' : ''}`}>
-    <PngAnimator
-      basePath="/ME-Comp"
-      prefix="ME-Comp"
-      frameCount={30}
-      interval={80}
-      digits={4}
-      playing={hoveringFooter}
-    />
-  </div>
+<section className="footer-animator-wrapper">
+  <video
+    src="/ME-Comp.mp4"
+    className="footer-video"
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 </section>
     </FadeInWrapper>
   );

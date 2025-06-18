@@ -376,3 +376,21 @@ html, body {
   opacity: 1;
   pointer-events: auto;
 }
+
+
+.footer-animator-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-video {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+}
