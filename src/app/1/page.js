@@ -182,7 +182,7 @@ export default function PageOne() {
 	  <span className="bold-line">Build the best place to trade and create onchain.</span> Fast, intuitive and ready for wherever the space goes next.
 	</p>
         <p>
-          We're applying everything we learned from NFTs to token trading, L2 infrastructure, AI and tools that push the limits of what’s possible across chains. 
+          We're applying everything we learned from NFTs to token trading, L2 infrastructure, AI and tools that push the limits of what's possible across chains. 
         </p>
       </section>
 
