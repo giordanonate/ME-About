@@ -354,3 +354,25 @@ html, body {
   text-decoration: underline;
 }
 
+
+.footer-animator-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-animator-inner {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  position: relative;
+}
+
+.footer-animator-inner.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

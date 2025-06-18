@@ -68,6 +68,7 @@ export default function PageOne() {
   const [hoveringCubes, setHoveringCubes] = useState(false);
   const [hoveringEmmy, setHoveringEmmy] = useState(false);
   const [hoveringBtc, setHoveringBtc] = useState(false);
+  const [hoveringFooter, setHoveringFooter] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -92,175 +93,84 @@ export default function PageOne() {
       </section>
 
       <section className="two-column-section">
-        <div
-          className="column"
-          onMouseEnter={() => setHoveringBtc(true)}
-          onMouseLeave={() => setHoveringBtc(false)}
-        >
-<div className="column-bg">
-  <div className={`animated-bg ${hoveringBtc ? 'visible' : ''}`}>
-    <PngAnimator
-      basePath="/Blocks-BTC-Stats"
-      prefix="Blocks-BTC-Stats"
-      frameCount={30}
-      interval={80}
-      digits={4}
-      playing={hoveringBtc}
-    />
-  </div>
-</div>
-          <PngAnimator
-            basePath="/BTC-Floating"
-            prefix="BTC-Floating"
-            frameCount={60}
-            interval={80}
-            digits={4}
-            playing={hoveringBtc}
-          />
+        <div className="column" onMouseEnter={() => setHoveringBtc(true)} onMouseLeave={() => setHoveringBtc(false)}>
+          <div className="column-bg">
+            <div className={`animated-bg ${hoveringBtc ? 'visible' : ''}`}>
+              <PngAnimator basePath="/Blocks-BTC-Stats" prefix="Blocks-BTC-Stats" frameCount={30} interval={80} digits={4} playing={hoveringBtc} />
+            </div>
+          </div>
+          <PngAnimator basePath="/BTC-Floating" prefix="BTC-Floating" frameCount={60} interval={80} digits={4} playing={hoveringBtc} />
           <img src="/1-Bitcoin-App.png" alt="#1 Bitcoin App" style={{ width: '100%', marginTop: '-20px' }} />
         </div>
 
-        <div
-          className="column"
-          onMouseEnter={() => setHoveringEmmy(true)}
-          onMouseLeave={() => setHoveringEmmy(false)}
-        >
-<div className="column-bg">
-  <div className={`animated-bg ${hoveringEmmy ? 'visible' : ''}`}>
-    <PngAnimator
-      basePath="/Blocks-NFT-Stats"
-      prefix="Blocks-NFT-Stats"
-      frameCount={30}
-      interval={80}
-      digits={4}
-      playing={hoveringEmmy}
-    />
-  </div>
-</div>
-          <PngAnimator
-            basePath="/Emmy-Floating"
-            prefix="Emmy-Floating"
-            frameCount={15}
-            interval={40}
-            digits={4}
-            playing={hoveringEmmy}
-          />
+        <div className="column" onMouseEnter={() => setHoveringEmmy(true)} onMouseLeave={() => setHoveringEmmy(false)}>
+          <div className="column-bg">
+            <div className={`animated-bg ${hoveringEmmy ? 'visible' : ''}`}>
+              <PngAnimator basePath="/Blocks-NFT-Stats" prefix="Blocks-NFT-Stats" frameCount={30} interval={80} digits={4} playing={hoveringEmmy} />
+            </div>
+          </div>
+          <PngAnimator basePath="/Emmy-Floating" prefix="Emmy-Floating" frameCount={15} interval={40} digits={4} playing={hoveringEmmy} />
           <img src="/Largest-NFT-Marketplace-Copy.png" alt="Largest NFT Marketplace" style={{ width: '100%', marginTop: '-20px' }} />
         </div>
       </section>
 
       <section className="body-text-box" style={{ marginBottom: '100px' }}>
-	<p>
-	  We’ve built the largest cross-chain NFT marketplace and the #1 Bitcoin app, and with now our acquisition of <a href="https://slingshot.app" target="_blank" rel="noopener noreferrer" className="green-link">Slingshot</a>, users 	can trade over 5 million tokens across all major chains.
-	</p>
-
         <p>
-          Our growing product suite includes a cross-chain wallet, advanced trading tools and the ability to mint, collect and trade, well, anything. 
+          We&apos;ve built the largest cross-chain NFT marketplace and the #1 Bitcoin app, and with now our acquisition of{' '}
+          <a href="https://slingshot.app" target="_blank" rel="noopener noreferrer" className="green-link">Slingshot</a>, users can trade over 5 million tokens across all major chains.
+        </p>
+        <p>
+          Our growing product suite includes a cross-chain wallet, advanced trading tools and the ability to mint, collect and trade, well, anything.
         </p>
       </section>
 
-      <div
-        className="cubes-underlay"
-        onMouseEnter={() => setHoveringCubes(true)}
-        onMouseLeave={() => setHoveringCubes(false)}
-      >
-        <PngAnimator
-          basePath="/Blocks-Frames"
-          frameCount={60}
-          interval={90}
-          playing={hoveringCubes}
-        />
-        <img
-          src="/Our-Vision.png"
-          alt="Our Vision"
-          className="cubes-overlay"
-        />
+      <div className="cubes-underlay" onMouseEnter={() => setHoveringCubes(true)} onMouseLeave={() => setHoveringCubes(false)}>
+        <PngAnimator basePath="/Blocks-Frames" frameCount={60} interval={90} playing={hoveringCubes} />
+        <img src="/Our-Vision.png" alt="Our Vision" className="cubes-overlay" />
       </div>
 
       <section className="body-text-box" style={{ marginTop: '-40px' }}>
-	<p>
-	  <span className="bold-line">Build the best place to trade and create onchain.</span> Fast, intuitive and ready for wherever the space goes next.
-	</p>
-        <p>
-          We're applying everything we learned from NFTs to token trading, L2 infrastructure, AI and tools that push the limits of what's possible across chains. 
-        </p>
+        <p><span className="bold-line">Build the best place to trade and create onchain.</span> Fast, intuitive and ready for wherever the space goes next.</p>
+        <p>We&apos;re applying everything we learned from NFTs to token trading, L2 infrastructure, AI and tools that push the limits of what&apos;s possible across chains.</p>
       </section>
 
       <div style={{ position: 'relative', width: '100%', height: '500px', marginTop: '-50px' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
           <FounderParticles />
         </div>
-        <img
-          src="/Our-Founders.png"
-          alt="Our Founders"
-          className="founders-overlay"
-        />
+        <img src="/Our-Founders.png" alt="Our Founders" className="founders-overlay" />
       </div>
 
       <section className="founder-cards">
-        <div className="founder-card">
-          <div className="founder-card-inner">
-            <img src="/Sydney.png" alt="Sydney Zhang" />
-            <h4>Sydney Zhang</h4>
-            <p>
-  <a href="https://twitter.com/sidazhang" target="_blank" rel="noopener noreferrer" className="twitter-link">
-    @sidazhang
-  </a>
-</p>
-
+        {[
+          { name: 'Sydney Zhang', handle: 'sidazhang', img: '/Sydney.png' },
+          { name: 'Jack Lu', handle: '0xLeoinRio', img: '/Jack.png' },
+          { name: 'Zhuoxun Yin', handle: 'ZhuoxunYun', img: '/Z.png' },
+          { name: 'Zhuojie Zhou', handle: 'rexzh0u', img: '/Rex.png' }
+        ].map((f, i) => (
+          <div className="founder-card" key={i}>
+            <div className="founder-card-inner">
+              <img src={f.img} alt={f.name} />
+              <h4>{f.name}</h4>
+              <p>
+                <a href={`https://twitter.com/${f.handle}`} target="_blank" rel="noopener noreferrer" className="twitter-link">
+                  @{f.handle}
+                </a>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="founder-card">
-          <div className="founder-card-inner">
-            <img src="/Jack.png" alt="Jack Lu" />
-            <h4>Jack Lu</h4>
-<p>
-            <a href="https://twitter.com/0xLeoinRio" target="_blank" rel="noopener noreferrer" className="twitter-link">
-  @0xLeoinRio
-</a>
-</p>
-          </div>
-        </div>
-        <div className="founder-card">
-          <div className="founder-card-inner">
-            <img src="/Z.png" alt="Zhuoxun Yin" />
-            <h4>Zhuoxun Yin</h4>
-<p>
-            <a href="https://twitter.com/ZhuoxunYun" target="_blank" rel="noopener noreferrer" className="twitter-link">
-  @ZhuoxunYun
-</a>
-</p>
-
-          </div>
-        </div>
-        <div className="founder-card">
-          <div className="founder-card-inner">
-            <img src="/Rex.png" alt="Zhuojie Zhou" />
-            <h4>Zhuojie Zhou</h4>
-<p>
-            <a href="https://twitter.com/rexzh0u" target="_blank" rel="noopener noreferrer" className="twitter-link">
-  @rexzh0u
-</a>
-</p>
-          </div>
-        </div>
+        ))}
       </section>
 
-<section className="body-text-box" style={{ marginTop: '320px' }}>
-  <p>
-    Magic Eden was founded in 2021 by Jack Lu (CEO), Sidney Zhang (CTO), Zhuoxun Yin (COO) and Zhuojie Zhou (Chief Engineer) with one goal: create a fast, intuitive platform where trading, collecting and interacting with digital assets could feel natural.
-  </p>
-  <p>
-We started with NFTs. Now, we're building the on-chain future as one of the most recognizable names in crypto.
-  </p>
-</section>
+      <section className="body-text-box" style={{ marginTop: '320px' }}>
+        <p>
+          Magic Eden was founded in 2021 by Jack Lu (CEO), Sidney Zhang (CTO), Zhuoxun Yin (COO) and Zhuojie Zhou (Chief Engineer) with one goal: create a fast, intuitive platform where trading, collecting and interacting with digital assets could feel natural.
+        </p>
+        <p>We started with NFTs. Now, we&apos;re building the on-chain future as one of the most recognizable names in crypto.</p>
+      </section>
 
       <section className="links-title-wrapper" style={{ marginTop: '100px' }}>
-        <img
-          src="/Links.png"
-          alt="Links Section Title"
-          className="links-title"
-        />
+        <img src="/Links.png" alt="Links Section Title" className="links-title" />
       </section>
 
       <div className="links-button-row">
@@ -270,13 +180,22 @@ We started with NFTs. Now, we're building the on-chain future as one of the most
         <a href="#" className="gradient-button">Brandkit</a>
       </div>
 
-      <section className="footer-image-wrapper">
-        <img
-          src="/Computer.png"
-          alt="Computer Footer"
-          className="footer-image"
-        />
-      </section>
+      <section
+  className="footer-animator-wrapper"
+  onMouseEnter={() => setHoveringFooter(true)}
+  onMouseLeave={() => setHoveringFooter(false)}
+>
+  <div className={`footer-animator-inner ${hoveringFooter ? 'visible' : ''}`}>
+    <PngAnimator
+      basePath="/ME-Comp"
+      prefix="ME-Comp"
+      frameCount={30}
+      interval={80}
+      digits={4}
+      playing={hoveringFooter}
+    />
+  </div>
+</section>
     </FadeInWrapper>
   );
 }
