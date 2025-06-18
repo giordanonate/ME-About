@@ -251,7 +251,7 @@ export default function PageOne() {
     Magic Eden was founded in 2021 by Jack Lu (CEO), Sidney Zhang (CTO), Zhuoxun Yin (COO) and Zhuojie Zhou (Chief Engineer) with one goal: create a fast, intuitive platform where trading, collecting and interacting with digital assets could feel natural.
   </p>
   <p>
-We started with NFTs. Now, we’re building the on-chain future as one of the most recognizable names in crypto.
+We started with NFTs. Now, we're building the on-chain future as one of the most recognizable names in crypto.
   </p>
 </section>
 
